@@ -23,12 +23,13 @@ export default function Home() {
     setButtons(data);
   }
 
+  //Render the Site
   return (
     <>
       <div className="container mx-auto">
         <div className="flex items-center border-b border-b-2 border-grey-500 py-2">
           <input
-            className="border-2 border-gray-300 bg-white w-full h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none"
+            className="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-4 pr-4 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
             type="text"
             placeholder="Search"
             onChange={(e) => getButtons(e)}
@@ -36,7 +37,7 @@ export default function Home() {
         </div>
         {buttons.map((button) => (
           <button
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-2"
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg m-2 shadow-md"
             key={button.BtnName}
             style={{ width: button.Breite, height: button.Höhe }}
           >
